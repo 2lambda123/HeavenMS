@@ -138,7 +138,9 @@ public class MapleExpedition {
 			public void run() {
 				if (registering){
                                         exped.removeChannelExpedition(startMap.getChannelServer());
-					if (!silent) startMap.broadcastMessage(MaplePacketCreator.serverNotice(6, "[Expedition] The time limit has been reached. Expedition has been disbanded."));
+					if (!silent) {
+					    startMap.broadcastMessage(MaplePacketCreator.serverNotice(6, "[Expedition] The time limit has been reached. Expedition has been disbanded."));
+					}
                                         
                                         dispose(false);
 				}

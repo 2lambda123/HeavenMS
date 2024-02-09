@@ -41,7 +41,9 @@ public final class NoteActionHandler extends AbstractMaplePacketHandler {
             String message = slea.readMapleAsciiString();
             try {
                 if (c.getPlayer().getCashShop().isOpened())
-                    c.announce(MaplePacketCreator.showCashInventory(c));
+                    {
+                        c.announce(MaplePacketCreator.showCashInventory(c));
+                    }
                 
                     c.getPlayer().sendNote(charname, message, (byte) 1);
                     c.getPlayer().getCashShop().decreaseNotes();
