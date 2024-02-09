@@ -42,7 +42,9 @@ public class MapleOla {
             @Override
             public void run() {
             if (chr.getMapId() >= 109030001 && chr.getMapId() <= 109030303)
-             chr.changeMap(chr.getMap().getReturnMap());
+             {
+                 chr.changeMap(chr.getMap().getReturnMap());
+             }
              resetTimes();
             }
            }, 360000);
